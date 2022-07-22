@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,57 +7,74 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
-<body class="body"> 
+
+<body class="body">
     <header class="header">
+        
         <div class="divheader">
             <h1 class="h1header">CONVERSOR DE DIVISAS</h1>
         </div>
     </header>
+    
     <main class="main">
+       
         <section class="section">
-            <h2 > Convertidor de moneda en tiempo real 100% gratis</h2>
+            <h2> Convertidor de moneda en tiempo real 100% gratis</h2>
             <h3>
-            Convierta culaquier monto en pesos argentinos a:
+                Convierta culaquier divisa
             </h3>
-    </section>
-        <div class="divmain">
-        <ul class="ul">
-        <li>
-            Dolar Americano
-        </li>
-        <li>
-            Euro
-        </li>
-        </ul>
-        </div>
-    <div class="divconversor">
-    <div>
-    <section class="sectionaccion">
-        <div>
-        <label for="number" class="label">Cantidad de pesos argentinos:</label>
-        <input name="cantidad" type="number" step="any" class="input">
-    </div>
-    <br> 
-    <div>
-        <label for="divisa" class="label">Divisa a interactuar:</label>
-        <select name="divisa" id="Divisa a interactuar" class="input">
-            <option value="USD" selected="selected">Dolar Americano</option>
-            <option value="Euro" selected="selected">Euro</option>
-
+        </section>
+        
+<br>
+<br>
+<br>
+        <div class="divaccion">
             
-        </select>
-    </div>
-    <br>
-    <button type="submit" name="convertir" class="button">Convertir</button>
-</section>
-</div>
-<div>
-</div>
+            <section class="sectionaccion">
+                
+                <div>
+                    
+                    <label for="number" class="label">Importe:</label>
+                    <input name="cantidad" type="number" step="any" class="input" id="inputImporte">
+                </div>
+            <br>
+                <div>
+                    <section>
+                    <label for="divisa" class="label">Convertir de:</label>
+                    <select name="divisa" id="Divisa a interactuar" class="input" id="convertionFrom">
+                        <option value="USD" selected="selected" id="usd1">Dolar Americano</option>
+                        <option value="Euro" selected="selected" id="euro1">Euro</option>
+                        <option value="ARS" selected="selected" id="ars1">Peso Argentino</option>
+                    </select>
+                </section>
+                <br>
+                <section>
+                    <label for="divisa" class="label">Convertir a:</label>
+                    <select name="divisa" id="Divisa a interactuar" class="input" id="convertionTo">
+                        <option value="USD" selected="selected" id="usd2">Dolar Americano</option>
+                        <option value="Euro" selected="selected" id="euro2">Euro</option>
+                        <option value="ARS" selected="selected" id="ars2">Peso Argentino</option>
+                    </select>
+                </section>
+                    
+                </div>
+            <br>
+    
+            <div class="divBotones">
+            <button id="botonConversion" type="button" name="convertir" class="button">Convertir</button>
+            <button type="button" name="convertir" class="buttonSwap" id="swap"><img src="assets/img/money-exchange.png" alt="convertion symbol"></button>
+       
+        </div>
+        </section>
+        </div>
+
     </main>
     <footer class="footer">
-        <h5>Copyright (c) 2022 - Todos los derechos reservados. Las cotizaciones suministradas en este sitio son solamente de carácter informativo y no oficial.</h5>
+        <h4>Copyright (c) 2022 - Todos los derechos reservados. Las cotizaciones suministradas en este sitio son
+            solamente de carácter informativo y no oficial.</h4>
 
     </footer>
     <script src="miarchivo.js"></script>
 </body>
+
 </html>

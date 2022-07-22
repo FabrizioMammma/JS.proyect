@@ -1,13 +1,50 @@
-const divisas=[
-    {id: 1, nombre: "DOLAR"},
-    {id: 2,nombre: "EURO"}
-]; 
-let arr1 = ["Dolar", "Euro"]; 
-alert("Cotizador de divisas peso Argentino a Dolar US$/Euro €");
-let tipoDeDivisa = prompt("Especifique con que divisa interactuara: " + arr1[0] + " o " + arr1[1]).toUpperCase();
+let input = document.getElementById("inputImporte"); 
+let optionUsd1 = document.getElementById("usd1"); 
+let optionEuro1 = document.getElementById("euro1"); 
+let optionArs1 = document.getElementById("ars1"); 
+let optionUsd2 = document.getElementById("usd2"); 
+let optionEuro2 = document.getElementById("euro2"); 
+let optionArs2 = document.getElementById("ars2");
+let convertion = document.getElementById("botonConversion"); 
+let swap = document.getElementById("swap");
+let convertionFrom = document.getElementById("convertionFrom"); 
+let convertionTo = document.getElementById("convertionTo"); 
+
+convertion.addEventListener("click", () => {
+    input = input.value;
+    convertionFrom = convertionFrom.value;
+    convertionTo = convertionTo.value; 
+});
+
+
+
+
+
+
+
+
+/* if (tipoDeDivisa === "DOLAR"){ 
+    
+    var resultadoCompra = pedirMonto() * 238;
+    
+} else if (tipoDeDivisa === "EURO") {
+    
+    var resultadoCompra = pedirMonto() * 263;
+    
+};  */
+
+
+/* divisas.forEach(el => {
+    alert(el.nombre)}
+); 
+var tipoDeDivisa = prompt("Especifique con que divisa interactuara:").toUpperCase(); 
+
 while (tipoDeDivisa != "DOLAR" && tipoDeDivisa != "EURO") {
     alert("Debe ingresar con que tipo de divisa interactuara!");
-    tipoDeDivisa = prompt("Especifique con que divisa interactuara: " + arr1[0] + " o " + arr1[1]).toUpperCase();
+    divisas.forEach(el => {
+        alert(el.nombre)}
+    ); 
+    var tipoDeDivisa = prompt("Especifique con que divisa interactuara:").toUpperCase();
 };
 
 function pedirMonto() {
@@ -17,44 +54,4 @@ function pedirMonto() {
         dineroMonto = parseFloat(prompt("Especifique la cantidad de pesos argentinos sin ningun simbolo"));
     };
     return dineroMonto;
-}
-
-const dolar = divisas.find((el) => el.nombre === "DOLAR");
-const euro = divisas.find((el) => el.nombre === "EURO");
-
-
-if (tipoDeDivisa === dolar.nombre) {
-    alert("Precio de compra: $235 Precio de venta: $238");
-
-    var operacion = prompt("Indique la operacion a realizar: comprar o vender ").toLowerCase();
-    while (operacion != "comprar" && operacion != "vender") {
-        alert("Las operaciones posibles son comprar o vender");
-        operacion = prompt("Especifique que acción llevara a cabo: comprar o vender").toLowerCase();
-    };
-
-    if (operacion === "comprar") {
-        var resultadoCompra = pedirMonto() * 238;
-        alert("La conversion en dolares seria de US$" + resultadoCompra + ".");
-    } else if (operacion === "vender") {
-        var resultadoVenta = pedirMonto() * 235;
-        alert("La conversion en dolares seria de US$" + resultadoVenta + ".");
-    }
-
-} else if (tipoDeDivisa === euro.nombre) {
-    alert("Precio de compra: $263 Precio de venta: $258");
-
-    var operacion = prompt("Indique la operacion a realizar: comprar o vender ").toLowerCase();
-    while (operacion != "comprar" && operacion != "vender") {
-        alert("Las operaciones posibles son comprar o vender");
-        operacion = prompt("Especifique que acción llevara a cabo: comprar o vender").toLowerCase();
-    };
-
-    if (operacion === "comprar") {
-        var resultadoCompra = pedirMonto() * 263;
-        alert("La conversion en euros seria de €" + resultadoCompra + ".");
-    } else if (operacion === "vender") {
-        var resultadoVenta = pedirMonto() * 258;
-        alert("La conversion en euros seria de €" + resultadoVenta + ".");
-    };
-
-}; 
+} */
