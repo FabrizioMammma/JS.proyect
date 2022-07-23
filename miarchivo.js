@@ -1,21 +1,54 @@
-let input = document.getElementById("inputImporte"); 
-let optionUsd1 = document.getElementById("usd1"); 
-let optionEuro1 = document.getElementById("euro1"); 
-let optionArs1 = document.getElementById("ars1"); 
-let optionUsd2 = document.getElementById("usd2"); 
-let optionEuro2 = document.getElementById("euro2"); 
-let optionArs2 = document.getElementById("ars2");
-let convertion = document.getElementById("botonConversion"); 
-let swap = document.getElementById("swap");
+// VARIABLES
+
+let input = document.getElementById("inputImporte");
 let convertionFrom = document.getElementById("convertionFrom"); 
 let convertionTo = document.getElementById("convertionTo"); 
+let convertionBtn = document.getElementById("botonConversion");
+let swap = document.getElementById("swap"); 
+let usd1 = document.getElementById("usd1");
+let euro1 = document.getElementById("euro1");
+let ars1 = document.getElementById("ars1");
+let usd2 = document.getElementById("usd2");
+let euro2 = document.getElementById("euro2");
+let ars2 = document.getElementById("ars2");
+let finalResult = document.getElementById("valorCotizado");
 
-convertion.addEventListener("click", () => {
-    input = input.value;
-    convertionFrom = convertionFrom.value;
-    convertionTo = convertionTo.value; 
-});
+// EVENTOS
 
+convertionBtn.addEventListener('click', convertion); 
+convertionFrom.addEventListener('change', convertion); 
+convertionTo.addEventListener('change', convertion); 
+input.addEventListener('input', convertion); 
+usd1.addEventListener('change', convertion);
+euro1.addEventListener('change', convertion);
+ars1.addEventListener('change', convertion);
+usd2.addEventListener('change', convertion);
+euro2.addEventListener('change', convertion);
+ars2.addEventListener('change', convertion);
+finalResult.addEventListener('change',convertion)
+
+function convertion (){
+    let dolar = 340; 
+    let euro = 345; 
+    let pesoArgentino = 1; 
+    let resultado; 
+
+    if (convertionFrom.value === ars1.value && convertionTo.value === usd2.value){
+        resultado = document.getElementById("inputImporte").value * dolar;
+        finalResult.innerHTML = resultado;
+      }
+       else if (convertionFrom.value === ars1.value && convertionTo.value=== euro2.value ){
+        resultado = document.getElementById("inputImporte").value * euro;
+        finalResult.innerHTML = resultado;
+       }
+         else if (convertionFrom.value === ars1.value && convertionTo.value === ars2.value){
+          resultado = document.getElementById("inputImporte").value * pesoArgentino;
+          finalResult.innerHTML = resultado;
+        };}
+
+
+
+ 
 
 
 
